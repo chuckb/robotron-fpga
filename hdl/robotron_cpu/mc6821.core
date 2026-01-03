@@ -1,0 +1,18 @@
+CAPI=2:
+name: robotron_fpga:cpu:mc6821:0.1.0
+
+filesets:
+  rtl:
+    files:
+      - mc6821.vhd
+    file_type: vhdlSource
+
+targets:
+  default:
+    default_tool: ghdl
+    filesets: [rtl]
+    toplevel: mc6821
+    tools:
+      ghdl: {analyze_options: [--std=08, -fsynopsys]}
+
+
